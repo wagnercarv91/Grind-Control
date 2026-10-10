@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  color: #38bdf8;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  text-align: center;
+}
+
+.card span {
+  font-size: 13px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-top: 8px;
+  color: #f8fafc;
+}
+
+section {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  margin-bottom: 25px;
+}
+
+section h3 {
+  font-size: 16px;
+  color: #38bdf8;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 180px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #38bdf8;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0369a1;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #334155;
+}
+
+th {
+  color: #94a3b8;
+  background-color: #0f172a;
+}
+
+.text-green {
+  color: #4ade80 !important;
+  font-weight: bold;
+}
+
+.text-red {
+  color: #f87171 !important;
+  font-weight: bold;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  padding: 6px 10px;
+  font-size: 12px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #94a3b8;
+  padding: 20px;
+  font-style: italic;
+}

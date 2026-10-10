@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Bankroll & Sessões</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Grind Control</h1>
+        <p class="subtitle">Gestão Profissional de Sessões e Bankroll</p>
+      </header>
+
+      <!-- Dashboard Cards -->
+      <div class="dashboard-grid">
+        <div class="card">
+          <span>Lucro Total</span>
+          <h2 id="total-profit">$0.00</h2>
+        </div>
+        <div class="card">
+          <span>Total de Sessões</span>
+          <h2 id="total-sessions">0</h2>
+        </div>
+        <div class="card">
+          <span>ROI Médio</span>
+          <h2 id="total-roi">0.0%</h2>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <section class="form-section">
+        <h3>Registrar Nova Sessão</h3>
+        <form id="session-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Data:</label>
+              <input type="date" id="date" required />
+            </div>
+            <div class="form-group">
+              <label for="platform">Plataforma:</label>
+              <select id="platform">
+                <option value="PokerStars">PokerStars</option>
+                <option value="GGPoker">GGPoker</option>
+                <option value="Ya Poker">Ya Poker</option>
+                <option value="WPT Global">WPT Global</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="buyin">Buy-in Total ($):</label>
+              <input
+                type="number"
+                id="buyin"
+                step="0.01"
+                placeholder="Ex: 100.00"
+                required
+                min="0"
+              />
+            </div>
+            <div class="form-group">
+              <label for="payout">Retorno / Premiação ($):</label>
+              <input
+                type="number"
+                id="payout"
+                step="0.01"
+                placeholder="Ex: 250.00"
+                required
+                min="0"
+              />
+            </div>
+            <div class="form-group">
+              <label for="hours">Duração (horas):</label>
+              <input
+                type="number"
+                id="hours"
+                step="0.5"
+                placeholder="Ex: 4"
+                required
+                min="0.5"
+              />
+            </div>
+          </div>
+
+          <button type="submit" id="btn-save">Adicionar Sessão</button>
+        </form>
+      </section>
+
+      <!-- History Section -->
+      <section class="history-section">
+        <h3>Histórico de Sessões</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Plataforma</th>
+                <th>Buy-in</th>
+                <th>Retorno</th>
+                <th>Lucro</th>
+                <th>Horas</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="session-table-body">
+              <!-- Linhas injetadas via JS -->
+            </tbody>
+          </table>
+          <p id="empty-message" class="empty-msg">
+            Nenhuma sessão registrada ainda.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
